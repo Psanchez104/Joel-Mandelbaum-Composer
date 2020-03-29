@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Bellota+Text&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color1: rgba(0, 81, 126);
+    --color2: rgba(217, 190, 59);
+    --color3: rgba(51,51,51);
+    --color4: rgba(95, 172, 194, 1);
+
+    --color1L: rgba(0, 81, 126, .5);
+    --color2L: rgba(217, 190, 59, .7);
+    --color3L: rgba(51,51,51, .8);
+    /* --color4L: rgba(95, 172, 194, 1); */
+
+}
+.container{
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+.blueBack{
+    background-color: var(--color1);
+    color: #fff;
+}
+.yellowBack{
+    background-color: var(--color2);
+    color: #333;
+}
+.darkBack{
+    background-color: var(--color3);
+    color: #fff;
+}
+.skyBack{
+    background-color: var(--color4);
+    color: #333;
+}
+.visible-nav{
+    margin-top: 0;
+}
+footer{
+    text-align: center;
+    background-color: var(--color3);
+    color: #fff;
+    padding: 25px;
+    font-size: 18px;
+    font-family: monospace;
+}
+
+
+
+/* HOME PAGE */
+
+
+
+nav{
+    height: 6vh;
+    font-size: 26px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 5px 10px rgba(51,51,51,0.5);
+    transition: .7s;
+    margin-top: -8vh;
+    z-index: 1;
+    font-family: 'Bellota text', sans-serif;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+nav li{
+    margin: 10px;
+}
+nav ul a{
+color: #fff;
+text-decoration: none;
+}
+nav ul a:hover{
+    /* text-decoration: underline; */
+    color: var(--color2);
+}
+
+#showcase{
+    height: 110vh;
+    background-image: linear-gradient(to right, rgba(51,51,51,0.4), rgba(51,51,51,0.4)), url(images/WaterColor4.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 25vh;
+    font-family: 'Bellota text', sans-serif;
+}
+#showcase h1{
+    font-size: 108px;
+    opacity: 0;
+    animation: appear 2s forwards;
+}
+#showcase h2{
+    font-size: 52px;
+    margin: 5vh 0 0 -25vw;
+    opacity: 0;
+    animation: appear 2s 1s forwards;
+}
+@keyframes appear{
+    100%{opacity: 1;}
+}
+#promo{
+    height: 95vh;
+}
+.promo{
+    display: flex;
+    justify-content: space-around;
+}
+#promo .container h1{
+    margin: 5vh 0;
+    text-align: center;
+    color: #333;
+    font-size: 32px;
+    font-family: 'Bellota text', sans-serif;
+}
+.news{
+    width: 20vw;
+    height: 65vh;
+    background-color: #fff;
+}
+.news:hover{
+    background-image: linear-gradient(135deg, rgba(5, 47, 145, .6), rgba(42, 138, 134, .6));
+    /* background-image: linear-gradient(135deg, rgba(0, 81, 126, .5), rgba(95, 172, 194, .5)); */
+    /* box-shadow: inset 0px 0px 10px #fff; */
+    box-shadow: 1px 1px 10px #666;
+    transform: scale(1.05);
+    transition: .5s;
+}
+.news:not(hover){
+    transform: scale(1);
+    transition: .5s;
+}
+#bio{
+    background-color: var(--color2L);
+}
+#bio .container{
+    display: flex;
+    justify-content: space-around;
+    padding: 35px 0;
+    align-items: center;
+}
+#bio img{
+    height: 60vh;
+    width: auto;
+    box-shadow: -5px 5px 10px #555;
+}
+#bio p{
+    width: 45vw;
+    line-height: 1.7em;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#bio p::first-letter {
+    color: var(--color1);
+    font-size: 5em;
+    float: left;
+    margin: 5px 2px 10px -5px;
+}
+
+
+
+/* Works Page */
+
+
+
+#wpage{
+    /* background-color: #C6DEE8; */
+}
+.intro{
+    text-align: center;
+    width: 65vw;
+    margin: 15vh auto;
+    padding: 25px;
+    /* color: var(--color2); */
+}
+.intro h1{
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+.intro p{
+    font-size: 18px;
+    line-height: 1.3em;
+}
+#works{
+    line-height: 1.8em;
+    width: 90%;
+    padding: 25px;
+    background-color: var(--color2L);
+}
+#works tr:nth-child(even){
+    background-color: var(--color2L);
+}
+td{
+    padding: 15px;
+}
+.num{
+    width: 5%;
+}
+.title{
+    width: 30%;
+}
+.type{
+    width: 15%;
+}
+.duration{
+    width: 5%;
+}
+.date{
+    width: 5%;
+}
+.info{
+    width: 40%;
+}
+
+
+
+/* Listen */
+
+
+
+#listening{
+    background-image: url(images/MENC\ 1950.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
